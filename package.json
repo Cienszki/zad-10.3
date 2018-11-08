@@ -12,6 +12,7 @@
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
     "build": "npm-run-all build:* test",
     "build:clean": "rimraf -r css/*",
+    "build:sass": "npm-run-all sassprefixer:*",
     "watch:sassprefixer": "onchange -d 100 sass/style.scss -- npm-run-all sassprefixer:*",
     "sassprefixer:sass": "node-sass --output-style expanded --source-map true -o css sass",
     "sassprefixer:autoprefixer": "autoprefixer-cli css/style.css",
@@ -27,6 +28,7 @@
     "browser-sync": "^2.23.6",
     "globstar": "^1.0.0",
     "jshint": "^2.9.5",
+    "node-sass": "^4.7.2",
     "nu-html-checker": "^0.1.0",
     "onchange": "^3.3.0"
   },
